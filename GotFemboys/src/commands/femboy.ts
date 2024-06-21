@@ -32,7 +32,7 @@ const femboy: Command = {
     const whisper = args[args.findIndex(x => x.name === "whisper")] as any;
 
     try {
-      let response = await REST.get("https://www.reddit.com/r/femboy.json");
+      let response = await REST.get("https://www.reddit.com/r/FemBoys.json");
       response = response.body?.data?.children?.[Math.floor(Math.random() * response.body?.data?.children?.length)]?.data;
 
       const embed = {
